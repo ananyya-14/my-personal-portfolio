@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .projects-page {
+            background: #eaf3ff;
+            min-height: 100vh;
+            color: #222;
+        }
+
+        .projects-page nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .projects-page .projects-header {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .projects-page .projects-header h1 {
+            color: #174a8b;
+            font-size: 32px;
+        }
+
+        .projects-page .projects-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .projects-page .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .projects-page .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .projects-page .project-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .projects-page .project-card h2 {
+            color: #174a8b;
+            margin-bottom: 10px;
+        }
+
+        .projects-page .project-card p {
+            line-height: 1.6;
+        }
+
+        .projects-page .tech {
+            display: inline-block;
+            background: #dceaff;
+            color: #174a8b;
+            padding: 6px 12px;
+            margin: 5px 4px 0 0;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .projects-page footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .projects-page .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="projects-page">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="biodata.html">Bio-data</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle">Dark / Light</button>
+    </nav>
+
+    <header class="projects-header">
+        <h1>MY PROJECTS</h1>
+        <p>A collection of my academic and personal projects</p>
+    </header>
+
+    <main class="projects-container">
+
+        <!-- Project 1 -->
+        <section class="project-card">
+            <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=900"
+                alt="Library books and shelves">
+
+            <h2>1. Library Management System</h2>
+
+            <p>
+                A web-based Library Management System developed to manage
+                library records and book information. It helps organize
+                book details and makes library management easier.
+            </p>
+
+            <h3>Technologies Used</h3>
+            <span class="tech">HTML</span>
+            <span class="tech">CSS</span>
+            <span class="tech">PHP</span>
+            <span class="tech">MySQL</span>
+        </section>
+
+        <!-- Project 2 -->
+        <section class="project-card">
+            <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900"
+                alt="Laptop showing a web development workspace">
+
+            <h2>2. Personal Portfolio Website</h2>
+
+            <p>
+                A personal website created to showcase my resume,
+                bio-data, skills and projects. It includes multiple
+                pages with navigation and interactive features.
+            </p>
+
+            <h3>Technologies Used</h3>
+            <span class="tech">HTML</span>
+            <span class="tech">CSS</span>
+            <span class="tech">JavaScript</span>
+            <span class="tech">jQuery</span>
+        </section>
+
+        <!-- Project 3 -->
+        <section class="project-card">
+            <img
+                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=900"
+                alt="Cybersecurity digital lock">
+
+            <h2>3. Multi-Factor Authentication System</h2>
+
+            <p>
+                An authentication system developed as my Diploma final
+                semester project. It improves user account security by
+                combining password-based login with OTP (One-Time Password)
+                verification. Users must complete both verification steps
+                to access the system.
+            </p>
+
+            <h3>Project Details</h3>
+            <p>
+                This project demonstrates the use of multi-factor
+                authentication to provide an additional layer of
+                security beyond a traditional password-based login.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ananya Anand Narvekar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

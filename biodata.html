@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bio-data</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bio-data Page Styling -->
+    <style>
+
+        body.biodata-page {
+            background-color: #eef5ff;
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .biodata-page .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .biodata-page .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Main Heading */
+        .biodata-header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .biodata-header h1 {
+            color: #245b9e;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .biodata-header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Main Content Card */
+        .biodata-card {
+            max-width: 850px;
+            width: 90%;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Section Headings */
+        .biodata-card h2 {
+            color: #245b9e;
+            border-bottom: 2px solid #d8e6f8;
+            padding-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        /* Tables */
+        .biodata-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .biodata-table th {
+            background-color: #2878bd;
+            color: white;
+        }
+
+        .biodata-table td,
+        .biodata-table th {
+            padding: 12px;
+            border: 1px solid #dce5f0;
+            text-align: left;
+        }
+
+        .biodata-table td:first-child {
+            font-weight: bold;
+            width: 35%;
+        }
+
+        /* Hobbies */
+        .biodata-list {
+            line-height: 2;
+        }
+
+        /* Print Button */
+        .print-container {
+            text-align: center;
+            margin: 35px auto 10px;
+            padding: 20px;
+        }
+
+        .print-button {
+            padding: 12px 30px;
+            background-color: #245b9e;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #174477;
+        }
+
+        /* Footer */
+        .biodata-footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+
+            .biodata-card {
+                padding: 15px;
+                width: 92%;
+            }
+
+            .biodata-header h1 {
+                font-size: 28px;
+            }
+
+            .biodata-table td,
+            .biodata-table th {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            .biodata-page .nav-links {
+                gap: 12px;
+            }
+        }
+
+        /* Print Settings */
+        @media print {
+
+            .navbar,
+            .print-container,
+            .biodata-footer {
+                display: none !important;
+            }
+
+            body.biodata-page {
+                background: white;
+            }
+
+            .biodata-card {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            .biodata-header {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="biodata-page">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="biodata.html">Bio-data</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="theme-toggle">🌙 / ☀️</button>
+
+    </nav>
+
+
+    <!-- Centered Bio-data Heading -->
+    <header class="biodata-header">
+
+        <h1>MY BIO-DATA</h1>
+
+        <p>Personal Profile</p>
+
+    </header>
+
+
+    <!-- Main Bio-data Content -->
+    <main class="biodata-card">
+
+
+        <!-- Personal Information -->
+        <section>
+
+            <h2>Personal Information</h2>
+
+            <table class="biodata-table">
+
+                <tr>
+                    <td>Full Name</td>
+                    <td>Ananya Anand Narvekar</td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>22 March 2005</td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>Female</td>
+                </tr>
+
+                <tr>
+                    <td>Nationality</td>
+                    <td>Indian</td>
+                </tr>
+
+                <tr>
+                    <td>Languages Known</td>
+                    <td>English, Kannada, Hindi</td>
+                </tr>
+
+                <tr>
+                    <td>Permanent Address</td>
+                    <td>Hubli, Karnataka</td>
+                </tr>
+
+                <tr>
+                    <td>Contact Number</td>
+                    <td>1234567899</td>
+                </tr>
+
+                <tr>
+                    <td>Email Address</td>
+                    <td>ananyanarvekar7979@gmail.com</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Educational Details -->
+        <section>
+
+            <h2>Educational Details</h2>
+
+            <table class="biodata-table">
+
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institution</th>
+                    <th>Year / Status</th>
+                </tr>
+
+                <tr>
+                    <td>B.E. – Computer Science</td>
+                    <td>KLE Institute of Technology, Hubli</td>
+                    <td>Currently Pursuing – 5th Semester</td>
+                </tr>
+
+                <tr>
+                    <td>Diploma</td>
+                    <td>C. I. Munvalli Polytechnic, Hubli</td>
+                    <td>2022</td>
+                </tr>
+
+                <tr>
+                    <td>SSLC</td>
+                    <td>Convent High School, Hubli</td>
+                    <td>Year not specified</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <!-- Hobbies and Interests -->
+        <section>
+
+            <h2>Hobbies and Interests</h2>
+
+            <ul class="biodata-list">
+
+                <li>Travelling</li>
+                <li>Listening to Music</li>
+                <li>Dancing</li>
+                <li>Reading</li>
+                <li>Photography</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Declaration -->
+        <section>
+
+            <h2>Declaration</h2>
+
+            <p>
+                I hereby declare that all the information provided
+                above is true and correct to the best of my
+                knowledge and belief.
+            </p>
+
+            <br>
+
+            <p><strong>Place:</strong> Hubli, Karnataka</p>
+
+            <p><strong>Name:</strong> Ananya Anand Narvekar</p>
+
+        </section>
+
+
+        <!-- Print Button at Bottom -->
+        <div class="print-container">
+
+            <button
+                class="print-button"
+                onclick="window.print()">
+
+                Print Bio-data
+
+            </button>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="biodata-footer">
+
+        <p>
+            © <span id="year"></span>
+            Ananya Anand Narvekar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Existing JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

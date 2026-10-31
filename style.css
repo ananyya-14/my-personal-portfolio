@@ -1,0 +1,528 @@
+
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7fc;
+    color: #26344a;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #102542;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #65c7f7;
+}
+
+/* Theme Button */
+
+.theme-btn {
+    background: #ffffff;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* Hero Section */
+
+.hero {
+    min-height: 470px;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #eaf4ff, #ffffff);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #2385c5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0;
+    color: #102542;
+}
+
+.hero h1 span {
+    color: #2385c5;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #58677d;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #102542;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1769aa;
+    border: 2px solid #1769aa;
+}
+
+/* Profile Area */
+
+.profile-area {
+    text-align: center;
+}
+
+.profile-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #1769aa;
+    border: 8px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-circle span {
+    font-size: 65px;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-area p {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Common Sections */
+
+.section {
+    padding: 55px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 28px;
+    color: #102542;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #58677d;
+}
+
+/* Skills */
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skill-card {
+    background: white;
+    color: #1769aa;
+    padding: 18px 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background: #102542;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+    background: #182538;
+    color: white;
+}
+
+body.dark-mode .hero {
+    background: #263b54;
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .section h2,
+body.dark-mode .hero h2 {
+    color: white;
+}
+
+body.dark-mode .about p {
+    color: #d4deea;
+}
+
+body.dark-mode .skill-card {
+    background: #263b54;
+    color: #65c7f7;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-circle {
+        width: 170px;
+        height: 170px;
+    }
+
+    .profile-circle span {
+        font-size: 50px;
+    }
+
+    .section {
+        padding: 40px 6%;
+    }
+}
+.welcome-animation {
+    animation: welcomeFade 2s ease-in-out;
+}
+
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESUME PAGE DESIGN ===== */
+
+.resume-page {
+    background: #f4f7fc;
+    color: #263248;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.resume-page main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.resume-page h1 {
+    text-align: center;
+    color: #247db8;
+    font-size: 36px;
+}
+
+.resume-page h2 {
+    color: #247db8;
+    border-bottom: 2px solid #d9e8f5;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.resume-page section {
+    background: white;
+    padding: 25px;
+    margin: 22px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
+}
+
+.resume-page section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+.resume-page p,
+.resume-page li {
+    color: #586579;
+}
+
+.resume-page li {
+    margin-bottom: 10px;
+}
+
+.resume-page table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resume-page th,
+.resume-page td {
+    padding: 13px;
+    text-align: left;
+    border: 1px solid #dce5ef;
+}
+
+.resume-page th {
+    background: #247db8;
+    color: white;
+}
+
+.resume-page tr:nth-child(even) {
+    background: #f1f6fb;
+}
+
+.resume-page a,
+.resume-page button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resume-page a:hover,
+.resume-page button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .resume-page main {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .resume-page h1 {
+        font-size: 27px;
+    }
+
+    .resume-page section {
+        padding: 18px;
+    }
+}
+
+@media print {
+    .resume-page button,
+    .resume-page nav {
+        display: none;
+    }
+
+    .resume-page section {
+        box-shadow: none;
+        break-inside: avoid;
+    }
+}
+
+/* =================================
+   EXTRA WEBSITE ANIMATIONS
+================================= */
+
+/* Smooth page entrance */
+body {
+    animation: pageAppear 0.8s ease-in-out;
+}
+
+@keyframes pageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading animation */
+h1 {
+    animation: headingAppear 1s ease-out;
+}
+
+@keyframes headingAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation hover effect */
+nav a {
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #2878d0;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Card entrance animation */
+.project-card,
+.contact-card,
+.biodata-card,
+.resume-card,
+section {
+    animation: cardAppear 0.9s ease both;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Card hover effect */
+.project-card,
+.contact-card,
+.biodata-card,
+.resume-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.contact-card:hover,
+.biodata-card:hover,
+.resume-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Image hover effect */
+.project-card img {
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.03);
+}
+
+/* Button hover animation */
+button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+

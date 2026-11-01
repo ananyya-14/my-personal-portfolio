@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .contact-page {
             background: #eaf3ff;
             min-height: 100vh;
             color: #222;
         }
-
         .contact-page nav {
             display: flex;
             justify-content: center;
@@ -22,23 +19,19 @@
             gap: 25px;
             padding: 20px;
         }
-
         .contact-header {
             text-align: center;
             padding: 30px 15px;
         }
-
         .contact-header h1 {
             color: #174a8b;
             font-size: 32px;
         }
-
         .contact-container {
             max-width: 850px;
             margin: 20px auto;
             padding: 20px;
         }
-
         .contact-card {
             background: white;
             padding: 30px;
@@ -46,12 +39,10 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-bottom: 25px;
         }
-
         .contact-card h2 {
             color: #174a8b;
             margin-bottom: 20px;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
@@ -61,49 +52,39 @@
             background: #f2f7ff;
             border-radius: 10px;
         }
-
         .contact-item .symbol {
             font-size: 25px;
         }
-
         .contact-item p {
             margin: 4px 0;
         }
-
         .contact-item a {
             color: #174a8b;
             text-decoration: none;
             overflow-wrap: anywhere;
         }
-
         .contact-item a:hover {
             text-decoration: underline;
         }
-
         .contact-note {
             text-align: center;
             line-height: 1.7;
         }
-
         .contact-page footer {
             text-align: center;
             padding: 20px;
         }
-
         @media (max-width: 600px) {
             .contact-container {
                 padding: 12px;
             }
-
             .contact-card {
                 padding: 20px;
             }
         }
     </style>
 </head>
-
 <body class="contact-page">
-
     <nav>
         <a href="index.html">Home</a>
         <a href="resume.html">Resume</a>
@@ -112,17 +93,13 @@
         <a href="contact.html">Contact</a>
         <button id="theme-toggle">Dark / Light</button>
     </nav>
-
     <header class="contact-header">
         <h1>CONTACT ME</h1>
         <p>Feel free to get in touch with me</p>
     </header>
-
     <main class="contact-container">
-
         <section class="contact-card">
             <h2>My Contact Information</h2>
-
             <div class="contact-item">
                 <span class="symbol">👤</span>
                 <div>
@@ -130,7 +107,6 @@
                     <p>Ananya Anand Narvekar</p>
                 </div>
             </div>
-
             <div class="contact-item">
                 <span class="symbol">📧</span>
                 <div>
@@ -140,7 +116,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="contact-item">
                 <span class="symbol">📱</span>
                 <div>
@@ -148,7 +123,15 @@
                     <a href="tel:1234567899">1234567899</a>
                 </div>
             </div>
-
+            <div class="contact-item">
+                <span class="symbol">💻</span>
+                <div>
+                    <p><strong>GitHub</strong></p>
+                    <a href="https://github.com/ananyya-14" target="_blank" rel="noopener noreferrer">
+                        github.com/ananyya-14
+                    </a>
+                </div>
+            </div>
             <div class="contact-item">
                 <span class="symbol">📍</span>
                 <div>
@@ -157,7 +140,6 @@
                 </div>
             </div>
         </section>
-
         <section class="contact-card contact-note">
             <h2>Get In Touch</h2>
             <p>
@@ -169,15 +151,11 @@
                 Feel free to contact me through email or phone.
             </p>
         </section>
-
     </main>
-
     <footer>
         <p>&copy; <span id="year"></span> Ananya Anand Narvekar. All Rights Reserved.</p>
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>

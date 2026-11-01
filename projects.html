@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
         .projects-page {
@@ -38,7 +37,7 @@
             margin: auto;
             padding: 20px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 25px;
         }
 
@@ -81,6 +80,72 @@
             font-size: 13px;
         }
 
+        /* Certifications Section */
+        .projects-page .certifications-section {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 35px 10px;
+        }
+
+        .projects-page .certifications-section > h2 {
+            color: #174a8b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .certification-subtitle {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .certification-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .certification-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 16px;
+            border: 1px solid #dceaff;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.09);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.14);
+        }
+
+        .certificate-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .certification-card h3 {
+            color: #174a8b;
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .certification-card p {
+            margin: 9px 0;
+            line-height: 1.5;
+        }
+
+        .certificate-tag {
+            display: inline-block;
+            background: #dceaff;
+            color: #174a8b;
+            padding: 7px 15px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
         .projects-page footer {
             text-align: center;
             padding: 20px;
@@ -91,12 +156,21 @@
             .projects-page .projects-container {
                 grid-template-columns: 1fr;
             }
+
+            .projects-page .certifications-section {
+                grid-column: 1;
+            }
+
+            .certification-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body class="projects-page">
 
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="resume.html">Resume</a>
@@ -106,6 +180,7 @@
         <button id="theme-toggle">Dark / Light</button>
     </nav>
 
+    <!-- Page Heading -->
     <header class="projects-header">
         <h1>MY PROJECTS</h1>
         <p>A collection of my academic and personal projects</p>
@@ -179,13 +254,62 @@
             </p>
         </section>
 
+        <!-- Certifications -->
+        <section class="certifications-section">
+
+            <h2>MY CERTIFICATIONS</h2>
+
+            <p class="certification-subtitle">
+                Professional courses and certifications I've completed.
+            </p>
+
+            <div class="certification-container">
+
+                <!-- Certificate 1 -->
+                <div class="certification-card">
+                    <div class="certificate-icon">🏆</div>
+
+                    <h3>AI-900: Microsoft Azure AI Fundamentals</h3>
+
+                    <p><strong>Issued by:</strong> Infosys Springboard</p>
+                    <p><strong>Completion Date:</strong> 13 October 2026</p>
+
+                    <span class="certificate-tag">
+                        Artificial Intelligence
+                    </span>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certification-card">
+                    <div class="certificate-icon">☁️</div>
+
+                    <h3>CompTIA Cloud+: Cloud Capacity Planning</h3>
+
+                    <p><strong>Issued by:</strong> Infosys Springboard</p>
+                    <p><strong>Completion Date:</strong> 5 June 2026</p>
+
+                    <span class="certificate-tag">
+                        Cloud Computing
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Ananya Anand Narvekar. All Rights Reserved.</p>
+        <p>
+            &copy; <span id="year"></span>
+            Ananya Anand Narvekar. All Rights Reserved.
+        </p>
     </footer>
 
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
